@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+// the two imports above are always needed when creating react app. 
+// react dom allows us to build web applications. 
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
