@@ -2,13 +2,14 @@ import logo from './logo.svg';
 import './App.css';
 
 // this function is a component
+// which is a function that returns html
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Hello my name is Beni Zubi Kasikis
+          Hello my name is Beni Zubi Kasiki
         </p>
         <a
           className="App-link"
