@@ -6,20 +6,19 @@ import './App.css';
 // which is a function that returns html
 
 class App extends Component{
+  constructor(){
+    super();
+    this.state ={
+      string: 'Hello Zubi'
+    }
+  }
   render() {
     return(
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p> Hello Beni </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p> {this.state.string} </p>
+        <button> Change Text</button>
       </header>
     </div>
     )
