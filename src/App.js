@@ -18,7 +18,8 @@ class App extends Component{
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p> {this.state.string} </p>
-        <button> Change Text</button>
+
+        <button onClick={()=> this.setState({string:'Hello Beni'})}> Change Text</button>
       </header>
     </div>
     )
