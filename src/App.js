@@ -3,14 +3,13 @@ import './App.css';
 
 // this function is a component
 // which is a function that returns html
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hi my name is Beni
-        </p>
+        <p> Hello My name is Beni </p>
         <a
           className="App-link"
           href="https://reactjs.org"
