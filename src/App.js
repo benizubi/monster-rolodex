@@ -9,7 +9,7 @@ class App extends Component{
   constructor(){
     super();
     this.state ={
-      string: 'Hello Zubi'
+      string: 'Hello Beni'
     }
   }
   render() {
@@ -19,7 +19,7 @@ class App extends Component{
         <img src={logo} className="App-logo" alt="logo" />
         <p> {this.state.string} </p>
 
-        <button onClick={()=> this.setState({string:'Hello Beni'})}> Change Text</button>
+        <button onClick={()=> this.setState({string:'Hello Zubi'})}> Change Text</button>
       </header>
     </div>
     )
