@@ -14,6 +14,8 @@ class App extends Component{
   }
   render() {
     return(
+      // className is a JSX because class means something else in js and jsx uses className to distinguish between the two
+      // also the use of { } within the html tags forms javascript expression.
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
