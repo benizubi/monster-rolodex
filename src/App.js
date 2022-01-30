@@ -1,11 +1,11 @@
-import React, {Component} from 'react';
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 // this function is a component
 // which is a function that returns html
 
-class App extends Component{
+class App extends React.Component{
   constructor(){
     super();
 
