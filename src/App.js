@@ -10,20 +10,7 @@ class App extends React.Component{
     super();
 
     this.state = {
-      monsters: [
-        {
-          name: 'Frankenstein',
-          id: 'a'
-        },
-        {
-          name: "Dracula",
-          id: 'b'
-        },
-        {
-          name: "Zombie",
-          id: 'c'
-        }
-      ]
+      monsters: []
     }  
   }
   componentDidMount() {
