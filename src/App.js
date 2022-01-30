@@ -8,9 +8,21 @@ import './App.css';
 class App extends Component{
   constructor(){
     super();
-    this.state ={
-      string: 'Beni '
+
+    this.state = {
+      monsters: [
+        {
+          name: 'Frankenstein'
+        },
+        {
+          name: "Dracula"
+        },
+        {
+          name: "Zombie"
+        }
+      ]
     }
+
   }
   render() {
     return(
