@@ -12,13 +12,16 @@ class App extends Component{
     this.state = {
       monsters: [
         {
-          name: 'Frankenstein'
+          name: 'Frankenstein',
+          id: 'a'
         },
         {
-          name: "Dracula"
+          name: "Dracula",
+          id: 'b'
         },
         {
-          name: "Zombie"
+          name: "Zombie",
+          id: 'c'
         }
       ]
     }
@@ -26,15 +29,11 @@ class App extends Component{
   }
   render() {
     return(
-      // className is a JSX because class means something else in js and jsx uses className to distinguish between the two
-      // also the use of { } within the html tags forms javascript expression.
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p> {this.state.string} </p>
-
-        <button onClick={()=> this.setState({string:'Hello Zubi'})}> Change Text</button>
-      </header>
+        {
+          this.state.monsters.map(monster =>
+            <h1 key={monster.id}> {monster.name}</h1>)
+        }
     </div>
     )
   }
