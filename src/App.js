@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 // this function is a component
@@ -18,7 +17,7 @@ class App extends React.Component{
       .then(response => response.json())
       .then(users => this.setState({ monsters: users }));
   
-}
+ }
 
   render() {
     return(
