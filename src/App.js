@@ -1,4 +1,5 @@
 import React from 'react';
+import { CardList } from './components/card-list/card-list.component';
 import './App.css';
 
 // this function is a component
