@@ -23,7 +23,7 @@ class App extends React.Component{
   render() {
     return(
       <div className="App">
-        <CardList name='Beni'>
+        <CardList name='Beni Zubi'>
           <h1>Beni</h1>
         </CardList>
         {
