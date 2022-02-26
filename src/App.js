@@ -10,8 +10,9 @@ class App extends React.Component{
     super();
 
     this.state = {
-      monsters: []
-    }  
+      monsters: [],
+      searchField: ''
+    };
   }
   componentDidMount() {
     fetch('https://jsonplaceholder.typicode.com/users')
@@ -23,6 +24,7 @@ class App extends React.Component{
   render() {
     return(
       <div className="App">
+        <input type = 'search' placeholder='search Monsters'/>
         <CardList monsters={this.state.monsters} />
     </div>
     )
