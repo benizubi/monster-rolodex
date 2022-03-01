@@ -24,7 +24,9 @@ class App extends React.Component{
   render() {
     return(
       <div className="App">
-        <input type='search'
+        <input
+          className='search-box'
+          type='search'
           placeholder='search Monsters'
           onChange={e =>
             this.setState({ searchField: e.target.value })}
