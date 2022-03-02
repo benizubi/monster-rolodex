@@ -27,8 +27,8 @@ class App extends React.Component{
         <input
           className='search-box'
           type='search'
-          placeholder='search Monsters'
-          onChange={e =>
+          placeholder='search monsters'
+          onChange={(e) =>
             this.setState({ searchField: e.target.value })}
         />
         <CardList monsters={this.state.monsters} />
