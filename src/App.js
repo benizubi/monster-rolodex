@@ -17,10 +17,17 @@ class App extends React.Component{
   componentDidMount() {
     fetch('https://jsonplaceholder.typicode.com/users')
       .then(response => response.json())
-      .then(users => this.setState({ monsters: users }));
+      .then(users => this.setState(() => {
+        return { monsters: users }
+      },
+        () => {
+          console.log(this.state)
+        }
+      ));
  }
 
   render() {
+    console.log('render')
     return(
       <div className="App">
         <input
@@ -28,7 +35,8 @@ class App extends React.Component{
           type='search'
           placeholder='search monsters'
           onChange={(e) =>
-            this.setState({ searchField: e.target.value })}
+            this.setState(
+              { searchField: e.target.value })}
         />
         <CardList monsters={this.state.monsters} />
     </div>
