@@ -12,9 +12,12 @@ class App extends React.Component{
     this.state = {
       monsters: [],
       searchField: ''
+      
     };
+    console.log('constructor')
   }
   componentDidMount() {
+    console.log('componentDidMount')
     fetch('https://jsonplaceholder.typicode.com/users')
       .then(response => response.json())
       .then(users => this.setState(() => {
@@ -34,9 +37,9 @@ class App extends React.Component{
           className='search-box'
           type='search'
           placeholder='search monsters'
-          onChange={(e) =>
+          onChange={(event) =>
             this.setState(
-              { searchField: e.target.value })}
+              { searchField: event.target.value })}
         />
         <CardList monsters={this.state.monsters} />
     </div>
