@@ -20,7 +20,9 @@ class App extends React.Component{
     console.log('componentDidMount')
     fetch('https://jsonplaceholder.typicode.com/users')
       .then(response => response.json())
-      .then(users => this.setState(() => {
+      .then(users =>
+        this.setState(
+        () => {
         return { monsters: users }
       },
         () => {
