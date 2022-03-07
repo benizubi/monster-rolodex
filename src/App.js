@@ -42,10 +42,10 @@ class App extends React.Component {
           onChange={(event) => {
             console.log(event.target.value);
             // to lower case search string.
-            const searchString = event.target.value.toLocaleLowerCase();
+            const searchString = event.target.value.toLowerCase();
             //  search filtering 
-            const filteredMonsters = this.state.monsters.filter((monster) => {
-              return monster.name.toLocaleLowerCase.includes(searchString);
+            const filteredMonsters = this.state.monsters.filter((mon) => {
+              return mon.name.toLowerCase().includes(searchString);
             // includes plays a role of a boolean, also its not case sensitive.thus, have to use tolowercase.
             });
             this.setState(() => {
