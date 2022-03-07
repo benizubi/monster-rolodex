@@ -41,6 +41,17 @@ class App extends React.Component {
           placeholder='search monsters'
           onChange={(event) => {
             console.log(event.target.value);
+            // to lower case search string.
+            const searchString = event.target.value.toLocaleLowerCase();
+            //  search filtering 
+            const filteredMonsters = this.state.monsters.filter((monster) => {
+              return monster.name.toLocaleLowerCase.includes(searchString);
+            // includes plays a role of a boolean, also its not case sensitive.thus, have to use tolowercase.
+            });
+            this.setState(() => {
+              return { monsters: filteredMonsters };
+            })
+            // now I have set the original array to return the filtered result.
           }}
         />
         {this.state.monsters.map((monster) => {
