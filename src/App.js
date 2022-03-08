@@ -34,6 +34,7 @@ class App extends React.Component {
   render() {
     console.log('render')
     return (
+      
       <div className="App">
         <input
           className='search-box'
@@ -62,6 +63,7 @@ class App extends React.Component {
           );
         })}
       </div>
+      
     );
   }
 }
