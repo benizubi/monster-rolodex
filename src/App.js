@@ -33,8 +33,13 @@ class App extends React.Component {
 
   render() {
     console.log('render')
+    
+    const filteredMonsters = this.state.monsters.filter((mon) => {
+      return mon.name.toLowerCase().includes(searchString);
+    });
+    
+    
     return (
-      
       <div className="App">
         <input
           className='search-box'
