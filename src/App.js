@@ -34,9 +34,11 @@ class App extends React.Component {
   render() {
     console.log('render')
     
-    const filteredMonsters = this.state.monsters.filter((mon) => {
-      return mon.name.toLowerCase().includes(searchString);
-    });
+       //  search filtering 
+       const filteredMonsters = this.state.monsters.filter((mon) => {
+        return mon.name.toLowerCase().includes(searchString);
+      // includes plays a role of a boolean, also its not case sensitive.thus, have to use tolowercase.
+      });
     
     
     return (
@@ -48,14 +50,10 @@ class App extends React.Component {
           onChange={(event) => {
             console.log(event.target.value);
             // to lower case search string.
-            const searchString = event.target.value.toLowerCase();
-            //  search filtering 
-            const filteredMonsters = this.state.monsters.filter((mon) => {
-              return mon.name.toLowerCase().includes(searchString);
-            // includes plays a role of a boolean, also its not case sensitive.thus, have to use tolowercase.
-            });
+            const searchField = event.target.value.toLowerCase();
+        
             this.setState(() => {
-              return { monsters: filteredMonsters };
+              return { searchField};
             })
             // now I have set the original array to return the filtered result.
           }}
