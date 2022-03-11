@@ -36,7 +36,7 @@ class App extends React.Component {
     
        //  search filtering 
        const filteredMonsters = this.state.monsters.filter((mon) => {
-        return mon.name.toLowerCase().includes(searchString);
+        return mon.name.toLowerCase().includes(this.state.searchField);
       // includes plays a role of a boolean, also its not case sensitive.thus, have to use tolowercase.
       });
     
@@ -58,7 +58,7 @@ class App extends React.Component {
             // now I have set the original array to return the filtered result.
           }}
         />
-        {this.state.monsters.map((monster) => {
+        {filteredMonsters.map((monster) => {
           return (
             <div key={monster.id}>
               <h1> {monster.name} </h1>
