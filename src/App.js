@@ -30,6 +30,15 @@ class App extends React.Component {
           }
         ));
   }
+   onSearchChange = (event) => {
+    // to lower case search string.
+    const searchField = event.target.value.toLowerCase();
+    this.setState(() => {
+      return { searchField };
+    })
+    // now I have set the original array to return the filtered result.
+  }
+
 
   render() {
     console.log('render')
@@ -47,16 +56,7 @@ class App extends React.Component {
           className='search-box'
           type='search'
           placeholder='search monsters'
-          onChange={(event) => {
-            console.log(event.target.value);
-            // to lower case search string.
-            const searchField = event.target.value.toLowerCase();
-        
-            this.setState(() => {
-              return { searchField};
-            })
-            // now I have set the original array to return the filtered result.
-          }}
+          onChange={this.onSearchChange}
         />
         {filteredMonsters.map((monster) => {
           return (
