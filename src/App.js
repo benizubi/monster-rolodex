@@ -42,6 +42,7 @@ class App extends React.Component {
 
   render() {
     console.log('render')
+    const { monsters, searchField } = this.state;
     
        //  search filtering 
        const filteredMonsters = this.state.monsters.filter((mon) => {
