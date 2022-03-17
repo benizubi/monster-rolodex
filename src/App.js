@@ -43,11 +43,11 @@ class App extends React.Component {
   render() {
     console.log('render')
     const { monsters, searchField } = this.state;
-    const { onSearchChange } - this;
+    const { onSearchChange } = this;
     
        //  search filtering 
-       const filteredMonsters = this.state.monsters.filter((mon) => {
-        return mon.name.toLowerCase().includes(this.state.searchField);
+       const filteredMonsters = monsters.filter((mon) => {
+        return mon.name.toLowerCase().includes(searchField);
       // includes plays a role of a boolean, also its not case sensitive.thus, have to use tolowercase.
       });
     
@@ -58,7 +58,7 @@ class App extends React.Component {
           className='search-box'
           type='search'
           placeholder='search monsters'
-          onChange={this.onSearchChange}
+          onChange={onSearchChange}
         />
         {filteredMonsters.map((monster) => {
           return (
