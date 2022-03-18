@@ -50,8 +50,6 @@ class App extends React.Component {
         return mon.name.toLowerCase().includes(searchField);
       // includes plays a role of a boolean, also its not case sensitive.thus, have to use tolowercase.
       });
-    
-    
     return (
       <div className="App">
         <input
