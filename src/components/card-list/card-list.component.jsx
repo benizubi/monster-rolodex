@@ -5,7 +5,13 @@ import { Component } from "react";
 
 class CardList extends Component{
     render() {
-        return <div> Hello I'm the CardList Compoenent</div>
+        
+        return (
+            <div>
+                <h1> Hello I'm the CardList Compoenent</h1>
+            </div>
+        
+        )
     }
 }
 
