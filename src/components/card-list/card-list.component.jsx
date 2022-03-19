@@ -1,4 +1,4 @@
-import { Component } from "react";
+import { Component } from 'react';
 
 class CardList extends Component{
     render() {
@@ -14,5 +14,4 @@ class CardList extends Component{
         )
     }
 }
-
 export default CardList;

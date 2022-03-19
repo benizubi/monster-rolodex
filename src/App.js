@@ -1,7 +1,6 @@
 import React from 'react';
-import { CardList } from './components/card-list/card-list.component';
 import './App.css';
-
+import CardList from './components/card-list/card-list.component';
 // this function is a component
 // which is a function that returns html
 
@@ -12,7 +11,7 @@ class App extends React.Component {
     this.state = {
       monsters: [],
       searchField: ''
-      
+        
     };
     console.log('constructor')
   }
@@ -55,7 +54,9 @@ class App extends React.Component {
           placeholder='search monsters'
           onChange={onSearchChange}
         />
-        <CardList monsters={filteredMonsters }/>
+        <CardList
+        id= "card-list"
+          monsters={filteredMonsters} />
       </div>
       
     );
