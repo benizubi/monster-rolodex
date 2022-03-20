@@ -55,8 +55,8 @@ class App extends React.Component {
           onChange={onSearchChange}
         />
         <CardList
-        id= "card-list"
-          monsters={filteredMonsters} />
+          monsters={filteredMonsters}
+        />
       </div>
       
     );
