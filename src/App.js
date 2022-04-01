@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import SearchBox from './components/search-box/search-box.component';
 import CardList from './components/card-list/card-list.component';
 // this function is a component
 // which is a function that returns html
@@ -48,7 +49,7 @@ class App extends React.Component {
       });
     return (
       <div className="App">
-        
+
         <CardList
           monsters={filteredMonsters}
         />
