@@ -51,6 +51,7 @@ class App extends React.Component {
       <div className="App">
 
         <CardList
+          <SearchBox  />
           monsters={filteredMonsters}
         />
       </div>
