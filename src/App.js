@@ -50,10 +50,9 @@ class App extends React.Component {
     return (
       <div className="App">
 
-        <CardList
-          <SearchBox  />
-          monsters={filteredMonsters}
-        />
+        <CardList   monsters={filteredMonsters} />
+          <SearchBox onChangeHandler={ onSearchChange}/>
+       
       </div>
       
     );
