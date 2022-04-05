@@ -51,7 +51,7 @@ class App extends React.Component {
       <div className="App">
 
         <CardList   monsters={filteredMonsters} />
-          <SearchBox onChangeHandler={ onSearchChange}/>
+        <SearchBox onChangeHandler={onSearchChange} placeholder='search monsters' />
        
       </div>
       
